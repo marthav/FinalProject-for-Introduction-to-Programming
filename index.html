@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Introduction to Programming Class</title>
+    
+        <link rel="stylesheet" href="css/style.css">   
+  </head>
+
+  <body>
+
+    <meta charset="utf-8">
+
+
+<title>Martha's Notes</title>
+<link rel="stylesheet" href="css/style.css">
+
+
+<body>
+  <h1>Table of Contents</h1>
+  <div class="concept">
+    <ol>
+      <li><a href="#BNotes">Beginning Notes</a></li>
+      <li><a href="#ThinkingLikeAProgrammer">Thinking Like a Programmer</a>
+        <ul>
+          <li><a href="#TechnologicalEmpathy">Technological Empathy</a></li>
+          <li><a href="#HtmlTags">That Wacky HTML  and Tags</a></li>
+          <li><a href="#ComputersAreStupid">Computers are Stupid</a></li>
+          <li><a href="#InlineVsBlock">Inline vs. Block Element</a>
+            <li><a href="#Resources">Resource(s) of Course(s)</a></li>
+            <li><a href="#TreelikeStructure">Tree-like Structure</a></li>
+            <li><a href="#HTMLCSSDOM">HTML CSS and DOM</a></li>
+        </ul>
+        </li>
+        <li><a href="#IntroductionToSeriousProgramming">Introduction to Serious Programming</a>
+          <ul>
+            <li><a href=#VariablesAndStrings>Variables and Strings</a>
+              <li><a href="#Assignment">Assignment</a></li>
+              <li><a href="#Combining">Combining</a></li>
+              <li><a href="#Indexing">Indexing</a></li>
+              <li><a href="#SubSequence">SubSequence</a></li>
+              <li><a href="#Input">Input ->Function->Output-></a>
+                <li><a href="#Variable">Variable</a></li>
+                <li><a href="#Decisions">Decisions and Repetition</a></li>
+              </li>
+              <li><a href="#OOP">Object Oriented Programming</a> </li>
+              <li><a href="#Class">Class</a> </li>
+              <li><a href="#Constructor">Constructor</a> </li>
+              <li><a href="#Self">Self</a> </li>
+              <li><a href="#Init">__init__</a> </li>
+              <li><a href="#Modulus">Modulus Operator</a></li>
+              <li><a href="#Template">Template</a></li>
+              <li><a href="#Dictionary">Dictionary</a></li>
+              <li><a href="#Problems">How to Solve Problems</a>
+                <li><a href="#Abstraction">Abstraction</a>
+          </ul>
+          </li>
+          <li><a href="#Networks">Introduction to Networks</a>
+            <ul>
+              <li><a href=#MakingInternetWork>Making Internet Work for You</a>
+            </ul>
+            </li>
+            <li><a href="#HolyMoly">Holy Moly and New Stuff</a>
+              <ul>
+                <li> <a href=#JavaScript>Java Script</a></li>
+                <li> <a href=#API>API</a></li>
+                <li> <a href=#RecursionAndParallel>Recursion and Parallel Computing</a></li>
+                <li> <a href=#BigProblems>Solving Big Problems</a></li>
+                <li> <a href=#Conclusion>In Conclusion</a></li>
+    </ol>
+  </div>
+
+  <h1 id="BNotes">Beginning Notes</h1>
+  <div class="concept">
+    <p> Well, before I submit the webpage for 7/27 due date, I decided to do a walk through of what I'm supposed to be doing, and where I'm supposed to be going. I decided to make note of the first bit:</p>
+
+    <blockquote>
+      In this Nanodegree you will get over the first hump that prevents many from entering the world of tech and programming. By the end of this program, you will have created dozens of impressive programs. For example, you'll have:
+      <ul>
+        <li>Built a web page and put it online.</li>
+        <li>Written computer code to automatically write emails.</li>
+        <li>Assembled a large program by using existing code written by others as "pieces."</li>
+      </ul>
+      <p> After doing these things, you'll be able to:</p>
+      <ul>
+        <li>Make an informed decision about what (if any) steps you want to take next.</li>
+        <li>Converse deeply about computer science and programming without getting lost in computer speak.</li>
+        <li>Explain big ideas in programming (like how the internet works or how a program runs) to a friend.</li>
+        <li>Use programming to automate your own life. </li>
+      </ul>
+    </blockquote>
+    <p><em>(this one seems like a really tall order!)</em></p>
+  </div>
+
+  <h1 id="ThinkingLikeAProgrammer">Getting Started - Thinking Like a Programmer</h1>
+  <div class="concept">
+    <ol class="a">
+      <li>Procedural Thinking</li>
+      <li>Abstract Thinking</li>
+      <li>Systems Thinking</li>
+      <li>Technological Empathy</li>
+      <li>Debugging</li>
+    </ol>
+  </div>
+  <h2 id="TechnologicalEmpathy">Technological Empathy</h2>
+  <div class="concept">
+    <ol class="a">
+      <li>How the Internet Works</li>
+      <li>How users, computers, servers, http, and the internet work together.</li>
+      <li> The Web is a compilation of HTML - Hypertext markup language documents - that speak to each other.</li>
+      <li>You, the user, use your computer's browser to make request to the internet by way of the servers, using HTTP, Hypertext Transfer Protocol.</li>
+      <li> the Server responds with Files.</li>
+    </ol>
+  </div>
+  <h2 id="HtmlTags">That wacky html and tags</h2>
+  <div class="concept">
+    <ul class="circle">
+      <li>HTML is the language of webpages.</li>
+      <li>Tags determine syntax for elements.</li>
+      <li>Tags can have attributes like "class".</li>
+      <li>Document Object Module- sort of like diagramming a sentence.</li>
+      <li> CSS is the styling, font size, background colors, HTML document can provide browser on what style to use and how to get it.</li>
+      <li>Java Script is the tool box to make the page function.</li>
+      <li>And finally, http is the protocol that is used to send the data around the web.</li>
+    </ul>
+  </div>
+  <h2 id="HtmlTags">Escape from HTML</h2>
+  <div class="concept">
+    <span class="code">
+      def escape_html(s):
+      <br> &nbsp;&nbsp; for (i,o) in ((&, "amp;"),
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (>, &ampgt;),
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (
+      < , &amplt;), <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              ( "", &ampquote;)): <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    s = s.replace(i,o) <br>
+   &nbsp;&nbsp; return s <br>
+print escape_html("test")
+    
+                    </span>
+    </p>
+  </div>
+  <h2 id="ComputersareStupid">Computers are Stupid</h2>
+  <div class="concept">
+    <p> Well... not too stupid to stump me... often. Computers think in binary and cannot function without explicit instructions.</p>
+  </div>
+  <h2 id="InlineVsBlock">Inline vs Block Elements</h2>
+  <div class="concept">
+    <p>
+      <em>Item below was shamelessly stolen from instructor notes.</em>
+    </p>
+    <blockquote>HTML elements are either inline or block. Block elements form an "invisible box" around the content inside of them.</blockquote>
+
+    <p>Whereas inline makes use of formatting within a line.O I suspect that practice and individual preference dictate which one(s) or how many of these you would use.
+    </p>
+  </div>
+
+  <h2 id="Resources">Re-Source(s) of Course(s)</h2>
+  <div class="concept">
+    <ul class="circle">
+      <li><a href="http://scratchpad.io/new-stretch-8772">scratchpad.io</a></li>
+      <li><a href="http://www.sublimetext.com/2">sublime text 2</a></li>
+      <li><a href="http://codepen.io/">codepen</a></li>
+      <li><a href="http://www.w3schools.com/">W3 Schools</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">Mozilla Web/CSS Reference</a></li>
+      <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+      <li><a href="http://jinja.pocoo.org/">jinja</a></li>
+      <li><a href="https://developer.chrome.com/devtools/docs/shortcuts">Chrome Dev Tools</a></li>
+      <li><a href="https://dash.generalassemb.ly/projects">Dash</a></li>
+      <li><a href="http://marthav.imgur.com/all/">My Images at Imgur</a>
+      </li>
+      <li><a href="https://appengine.google.com/">App Engine At Google</a></li>
+    </ul>
+  </div>
+  <h2 id="TreelikeStructure">Tree like Structure</h2>
+  <div class="concept">
+    <p>example:
+      <br> div -> h2 -> span -> text
+      <br> div -> p -> text
+      <br> div -> a ->text
+      <br> So, the tree like structure has boxes nested within boxes. Just like Russian nesting dolls!</p>
+  </div>
+  <h2 id="HTMLCSSDOM"> HTML and CSS and DOM </h2>
+  <div class="concept">
+    <p> HTML is truly the substance of the document. The core of the document. Cascading Style Sheets, is just that, how the document looks. I like to think of it as the CSS being the wardrobe if you will. And finally, DOM, Document Object Model. The DOM
+      takes the HTML elements, tags, etc. and creates the tree "structure" I like to think of this as the skeleton of the document. It's not the substance, but what you hang or attach the substance to.</p>
+  </div>
+  <h1 id="IntroductionToSeriousProgramming">Introduction to Serious Programming</h1>
+  <div class="concept">
+    <table style="width:100%">
+      <tr>
+        <td class="center">
+          <span class="computer"> computer</span>
+          <span class="program">program</span>
+          <span class="precise">precise sequence of steps</span>
+          <span class="computation">computation</span>
+          <span class="highlevel">highlevel language</span>
+          <span class="input">input</span>
+          <span class="interpreter">interpreter</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          A <span class="computer"> computer</span> is a universal <span class="computation">computation </span>machine. A <span class="program">program</span> is a <span class="precise">precise sequence of steps</span> for a <span class="computer">computer</span>.
+          A <span class="highlevel">high level language</span>, ie python, <span class="interpreter">interpreter</span> runs <span class="program">programs</span> using <span class="input">inputs.</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <h2 id="Assignment">Assignment Statement</h2>
+  <div class="concept">
+    <ul>
+      <li>Name(any sequence) = Expression</li>
+      <li>speed_of_light = 299792458 </li>
+      <li>String sequence of characters surrounded by quotes, single or double.</li>
+    </ul>
+  </div>
+  <h2 id="Combining">Combining or concatanating:</h2>
+  <div class="concept">
+    <p class="code">
+      name = "Ada"
+      <br> print ='Hello" + name + '!' + '!'
+      <br> Hello Ada!!!
+      <br>
+      </code>
+  </div>
+
+  <h2 id="Indexing">Indexing Strings</h2>
+  <div class="concept">
+    <p class="code">
+      <code>
+[string][<expression>]<br>
+udacity[0] -> 'u'<br>
+udacity<br>
+</code>
+
+  </div>
+  <h2 id="SubSequence">Selecting Sub Sequences</h2>
+  <div class="concept">
+    <code> 
+<p class="code">
+<string> [<expression>]-> one character string<br>
+<string>[<b>start expression</b>: <b>stop expression</b>]</code>-> string that is a sub-sequence of the characters in string starting from position <b>start</b> and ending in <b>stop</b>.
+    </p>
+
+
+    <table style="width:30%" class="code">
+      <tr>
+        <td> word = 'assume'</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td> print word[3]</td>
+        <td>u</td>
+      </tr>
+      <tr>
+        <td>print word[4:6]</td>
+        <td>me</td>
+      </tr>
+      <tr>
+        <td>print word[4:]</td>
+        <td>me</td>
+      </tr>
+      <tr>
+        <td>print word[:2]</td>
+        <td>as</td>
+      </tr>
+      <tr>
+        <td>print word[3:3]</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>print word[3:4]</td>
+        <td>u</td>
+      </tr>
+    </table>
+
+  </div>
+  <h2 id="Input">Input ->Function->Output-></h2>
+  <div class="concept">
+    <p>A <b>procedure</b> or <b>function</b> takes input and produces an output.
+      <br> A "def" defines the function and "return", returns the value of the function.
+      <br>
+      <br>
+      <span class="code">
+        def sum(a,b):<br>
+        >>>>>a = a + b <br>
+        >>>>>return a<br> 
+      print sum(2,3)<br><br>
+
+       >>>>><b>5</b></span>
+      <br> How do functions help programmers avoid repetition? Functions are tools that programmers can create and reuse forever! Once you've defined a function once, you never have to define it again.
+  </div>
+  </p>
+  </div>
+  <h2 id="Variable">Variables and String (things) and Lists (gists)</h2>
+  <div class="concept">
+    <p>
+      A <b>variable</b> allows you to assign a name to a value.<span class="code">
+  my_variable = 2</span> so the code
+      <br>
+      <span class="code">print my_variable + my_variable</span> would return <span class="code">22</span>.
+      <br>
+      <p><b>Variables</b> can be useful to programmers in many ways:
+        <br>
+        <ol>
+          <li>They improve code readability by using names that make sense to humans.</li>
+          <li>They give us a way to store the value of important data.</li>
+          <li>They give us a way to change the value of something for example, the line days = days-1</li>
+        </ol>
+
+        <p>In Python, 2 is a number while "2" is a <b>string</b>.</p>
+        <ul>
+          <li><span class="code">print 2 + 2</span>. would give <span class="code">4</span>.</li>
+          <li><span class="code">print "2" + "2"</span>. would give <span class="code">"22"</span>.</li>
+        </ul>
+
+        <p>
+          A <b>list</b> can hold anything we want and a <b>string</b> can only hold characters. A <b>list</b> can be mutated. We can create a <b>string</b>, we can store it in a <b>variable</b>, we can change the value of the <b>variable</b> by creating
+          a new <b>string</b>.
+        </p>
+
+  </div>
+  <h2 id="Decisions">Decisions and Repetition "if" and "while"</h2>
+  <div class="concept">
+    <p>I should be ashamed of myself, but, I'm not, not too much anyway. Andy's notes were so concise that I, well, stole them.</p>
+
+    <ul class="circle">
+      <li>Control flow statements (like 'if' and 'else') let us execute different blocks of code depending on some condition. While loops let us repeat a certain block of code many times until a certain condition is met.</li>
+      <li>==, !=, >, &lt;
+        < &lt;,>=,
+          < &lt;=: These are all Python "comparison operators". They return the "boolean" True when they are correct and False when they are not. For example, 5 !=6 would return True, since 5 is not equal to 6.</li>
+            <li>if, then, else: These three Python keywords let us tell Python what code we want it to execute in different situations.</li>
+            <li>while loops: A while loop will repeat the indented block of code beneath it as long as the condition on the first line (right after 'while') is true.</li>
+    </ul>
+    <p>
+      <b>A note about the "while loop" Luke said that we should only use the "while loop" as a last resort as it is too easy to get into an endless infinity loop.  You should attempt to run this logic as using "for" where possible.</b></p>
+
+  </div>
+
+  <h2 id="OOP">Object-oriented Programming (OOP) </h2>
+  <div class="concept">
+    <p>"OOP is a programming language model organized around objects rather than "actions" and data rather than logic. Historically, a program has been viewed as a logical procedure that takes input data, processes it, and produces output data. <i>http://searchsoa.techtarget.com/definition/object-oriented-programming, retrieved 12/15/2015</i>      In <b>object-oriented programming (OOP)</b>, objects are the things you think about first in designing a program and they are also the units of code that are eventually derived from the process. In between, each object is made into a generic class
+      of object and even more generic classes are defined so that objects can share models and reuse the class definitions in their code. Each object is an instance of a particular class or subclass with the class's own methods or procedures and data
+      variables. An object is what actually runs in the computer."<i> http://searchsoa.techtarget.com/definition/object, retrieved 12/15/2015</i>
+    </p>
+  </div>
+
+  <h2 id="Class">Class</h2>
+  <div class="concept">
+    <p>"Class is a template definition of the method s and variable s in a particular kind of object . Thus, an object is a specific instance of a class; it contains real values instead of variables."
+      <i>http://whatis.techtarget.com/definition/class, retrieved 12/15/2015</i></p>
+    <p>The Udacity course refers to the "Class" as a blueprint and an "Instance" as an example or expression of the blueprint.</p>
+  </div>
+  <h2 id="Constructor">Constructor</h2>
+  <div class="concept">
+    <p>A constructor is a special kind of method that Python calls when it instantiates an object using the definitions found in your class. Python relies on the constructor to perform tasks such as initializing (assigning values to) any instance variables
+      that the object will need when it starts. Constructors can also verify that there are enough resources for the object and perform any other start-up task you can think of.<i>http://www.dummies.com/how-to/content/how-to-create-a-constructor-in-python.html,retrieved on 12/16/2015</i>
+      <br>
+    </p>
+  </div>
+  <h2 id="Self">Self</h2>
+  <div class="concept">
+    <p>
+      Often, the first argument of a method is called self. This is nothing more than a convention: the name self has absolutely no special meaning to Python. Note, however, that by not following the convention your code may be less readable to other Python
+      programmers, and it is also conceivable that a class browser program might be written that relies upon such a convention. <i>https://docs.python.org/2.7/tutorial/classes.html#random-remarks, retrieved on 12/16/2015</i></p>
+  </div>
+  <h2 id="Init">__init__</h2>
+  <div class="concept">
+    <p>
+      The __init__ method is special. It is a constructor. Init receives parameters and assigns fields to the new class instance. It can validate arguments, do computations, call methods. <i>http://www.dotnetperls.com/class-python, retrieved 12/16/2015</i></p>
+  </div>
+  <h2 id="Modulus">Modulus %</h2>
+  <div class="concept">
+    <p> (number)/(modulus) - > remainder
+      <br> works like a clock so in this example:
+      <br> 14 % 2 = 2 </p>
+  </div>
+  <h2 id="Substitution">String Substitution</h2>
+  <div class="concept">
+    <ul>
+      <p>
+        <li>"&lt;b&gt;Some Bold Text&lt;/b&gt;" </br>
+          "&lt;b&gt; % s &lt;/b;&gt;" % variable </li>
+        <li>"text %s text %s" % (var1, var2)</li>
+    </ul>
+  </div>
+  <h2 id="Template">Template</h2>
+  <div class="concept">
+    <p>A template library is a library to build complicated strings.
+      <br> For this class jinja2 would be imported into the python file and referenced in the *.yaml file. Advantages of templates:
+      <br>
+      <ul>
+        <li>separate different types of code</li>
+        <li>make more readable code</li>
+        <li>make more secure websites</li>
+        <li>html files are easier to modify</li>
+      </ul>
+    </p>
+  </div>
+
+  <h2 id="Dictionary">Dictionary</h2>
+  <div class="concept">
+    <p>A set of key-value pairs. For example: {'hydrogen':1, 'helium':2} Dictionaries are mutable and you can access the index by d[k], where k is the key value.</p>
+  </div>
+
+  <h2 id="Problems">How to Solve Problems</h2>
+  <div class="concept">
+    <p>Well, I need practice on this. Understanding the Inputs, Understanding the Outputs and puzzling out the bridge between the two. Flow diagrams can help. Sometimes writing the problem out with words helps.</p>
+  </div>
+  <h2 id="Abstraction">Abstraction</h2>
+  <div class="concept">
+    <p>
+      Abstraction and libraries; In python and other languages, you can download different modules from the library. These modules have functions that you can use within your code by simply importing these modules from the library. The programmer is not required
+      to know how these modules work only how to access them by importing them from the library. </p>
+  </div>
+
+  <h1 id="Networks">Introduction to Networks</h1>
+  <div class="concept">
+    <p>
+      A group of entities that can communicate, even though they're not all directly connected. </p>
+    <ol>
+      <li>Latency - time it takes for a message/signal to get from source to destination.</li>
+      <li>Bandwidth - the amount of information that can be transmitted per unit time.</li>
+      <li>Bit - smallest unit of information</li>
+      <li>Protocols - the rules that the client, web browser and server use to talk to each other.HTTP, Hypertext Transfer Protocol, is standard for the internet.</li>
+    </ol>
+  </div>
+  <h2 id="MakingInternetWork">Making The Internet Work for You</h2>
+  <div class="concept">
+    <ol>
+      <li>URL- Uniform Resource Locator
+        <br>
+        <font color="blue">protocol - </font> <font color="green">host</font> - <font color="red">path;</font>
+        <br>
+        <font color="blue">
+ ftp:</font><font color="green">//www.udacity.com</font><font color="red">/about</font>
+      </li>
+      <li> Forms - allow the user to enter data and interact with the server.
+        <br> you must use &lt;form&gt;&lt;/form &gt; tags as well as &lt;input name = "q"&gt;" or input parameter
+        <br> to do an action: &ltd;form action ="/url that you want to go to"&gt;
+        <br> if you put in &lt;input type="password" &gt; the input box will display dots but the password itself will display in the url</li>
+      <li>The <b>Get handler</b> draws the form: "def get(self):"</li>
+      <li>The <b>Post handler</b> posts to the server: " def post(self):"</li>
+      <li>Preserving user's input. Example of code for this is as follows:
+        <p class="code">
+          &lt;label&gt; Month &lt;input type="text" name="month" value="%(month)s"&gt; &lt;label&gt;
+        </p>
+
+
+        <li><a href="https://cloud.google.com/appengine/docs/python/console/"> Google App Engine</a> - check out this tutorial for getting your websites online.</li>
+    </ol>
+  </div>
+
+  <h2 id="Validation">Validation</h2>
+  <div class="concept">
+    <p>Not sure if forms should be part of validation or if validation should be part of forms. Validation is necessary for data integrity as well as security when accessing a database. You don't want the wrong person in your network and you don't want the
+      wrong data in your network.</p>
+  </div>
+  <h1 id="HolyMoly">Holy Moly and New Stuff</h1>
+<div class="concept"><p>Mile long and inch high coverage here of new ideas.</p></div>
+    <h2 id="JavaScript">JavaScript</h2>
+    <div class="concept">
+      <p>JavaScript is "the language" of the internet. It is crucial to making web pages responsive and to come alive. As with the other components that we've touched upon in this class it is best to put JavaScript in a separate file so that the script(s)
+        themselves can be edited autonomously of the main file. JavaScript runs natively in the browser so you can see immediate results.  The examples below are typed into a play.js file and viewed in the browser console.
+        <br>
+        <br>
+        <span class="code">
+        var {{some variable name}} = var{{some value}} <br>
+         var firstName = MarthaV; <br>
+         var age = 35;<br>
+         
+         other examples: <br>
+         var myArray = [];<br>
+         var myFunc = func(){}; <br>
+         var myObj = {};<br><br>
+         </span> back to playing in the play.js file...
+        <br>
+        <span class="code">
+        var email = "mvanorshoven@udacity.com"; <br>
+        var newEmail = email.replace("udacity", "gmail");<br>
+        console.log(email);<br>
+        console.log(newEmail);<br>
+        </span>
+        <br>
+        Another key concept in JavaScript is Truthy/Falsy which really sounds to me like a term made up by five year olds.  In JavaScript there are only six Falsey values:
+        <ul>
+          <li>false</li>
+          <li>0 (zero)</li>
+          <li>"" (empty string)</li>
+          <li>null</li>
+          <li>undefined</li>
+          <li>NaN (Not a number)</li>
+      </ul>
+<br><p>
+      <b>Dot and Bracket Notation:</b><br>
+      Dot notation allows us to declare an object and then define it outside of the curly braces.
+     "Dot notation is faster to write and clearer to read.
+Square bracket notation allows access to properties containing special characters and selection of properties using variables."<i>http://www.dev-archive.net/articles/js-dot-notation/, retrieved on 12/20/2015.</i>
+      </p>
+    <p><b>  What is JSON?</b><br>
+
+"JavaScript Object Notation. JSON is a popular and simple format for storing and transferring nested or hierarchal data. It's so popular that most other programming languages have libraries capable of parsing and writing JSON (like Python's JSON library). Internet GET and POST requests frequently pass data in JSON format. JSON allows for objects (or data of other types) to be easily encapsulated within other objects. See the MDN or JSON.org for more details.<br>
+      ...If you're generating JSON by hand, you should copy and paste your code into a linter like <a href = "http://jsonlint.com/JSON">jsonlint.com</a> to quickly and easily find syntax errors." <i>https://www.udacity.com/course/viewer#!/c-nd000/l-4128098911/m-3095768545, retrieved on 12/20/2015</i><br>
+      </p>
+</div>
+ <h2 id="API">API - Application Programming Interface</h2>
+    <div class="concept">
+     
+      <p>
+        <ul>
+        <li>URLLIB2 - a library within python that you can call to call functions; you can use it to open files from other locations as well as identifying servers.</li>
+          <li>XML - Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format which is both human-readable and machine-readable. <i>https://en.wikipedia.org/wiki/XML, retrieved on 12/20/2015</i></li>
+          <li>Parsing and stuff... lots of examples of parsing dictionaries in JSON and XML.  Make sure that your website supports JSON and XML.</li>
+      </ul>
+      </p>
+          </div>
+     <h2 id="RecursionAndParallel">Recursion and Parallel Computing</h2>
+    <div class="concept">  
+      <p>
+        <ol>
+          <li>Recursive definitions has two parts:
+            <ol class="a">
+              <li>Base Case - Starting definition not defined in terms of itself.  Smallest input already know the answer</li>
+              <li>Recursive Case - defined in terms of "smaller" version of itself.</li>
+            </ol>
+          </li>
+            <li>Parallel Computing - Breaking a file into chunks and then compute the data on all of the chunks at the same time.</li>
+      </ul>
+</div>
+<h2 id="Big Problems">Solving Big Problems</h2>
+    <div class="concept">  
+      <p>Ok, I have watched this lesson a couple of times and I plan on watching it again... that said taking notes on this activity is daunting.  This portion of the class works through a problem and gives an example of that - solving the biggest word score that you can get in a word game like scrabble.
+      </p>
+</div>
+<h2 id="LookGood">Look Good Tools</h2>
+<div class="concept">  
+  <p>This last piece is FUN!  I made a little website in Dash, https://dash.generalassemb.ly/MarthaV/build-your-own-personal-website . And although the web background distracts from the web message, I just had fun throwing that web image up there.
+    
+    I culled through the links that were provided at the very end of the class for further Udacity study and the truth is, I want to take them all.</p>
+</div>
+    
+<h2 id="Conclusion">In Conclusion</h2>
+<div class="concept">     
+    <p>What I really need now is intensive practice, practice, practice. I can start on this page by splitting out all of the html and using templates.  I need to practice working with arrays and dictionaries as well as breaking down problems.  I do feel that this was quite the comprehensive overview.</p>
+</div>
+
+          
+</body>
+
+</html>
+    
+    
+    
+    
+    
+  </body>
+</html>
