@@ -1,4 +1,164 @@
-/*
+  /*
+Comments are only to help PEOPLE read a code file. The
+computer ignores them.
+*/
+
+
+/* This is a CSS comment */
+
+html,
+body {
+  margin: 0px;
+}
+
+body {
+  font-family: monospace;
+}
+
+.newspaper {
+  -webkit-columns: 100px 3;
+  /* Chrome, Safari, Opera */
+  -moz-columns: 100px 3;
+  /* Firefox */
+  columns: 100px 3;
+}
+
+{
+  outline: 1px/*solid red*/
+  !important;
+}
+
+p {
+  margin: 20px 0;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+p.thick {
+  font-weight: bold;
+  margin: 20px 0;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+td.center {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  /*this removes the bullets that show up by default in unordered lists */
+}
+
+ul.circle {
+  list-style-type: circle;
+}
+
+ul {
+  list-style-image: url("http://i.imgur.com/ECiitXp.png?4")
+}
+
+h1 {
+  text-align: center;
+  color: #294860;
+}
+
+h2 {
+  text-align: left;
+  color: #294860;
+  margin: 10px;
+}
+
+h3 {
+  text-align: left;
+  color: #294860;
+  margin: 20px;
+}
+
+a:link {
+  /* Essentially means a[href], or that the link actually goes somewhere */
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: green;
+}
+
+a:active {
+  color: red;
+}
+
+li {
+  font-size: 20px;
+  line-height: 22px;
+  /* each line of text should occupy 44 pixels of height (good for mobile usage and fat fingers) Ok, this I stole from Andy, I had no idea that this was a good size for mobile users*/
+}
+
+ol.a {
+  list-style-type: lower-alpha;
+}
+
+.concept {
+  background-color: #DFEAF1;
+  outline: 1px;
+  color: red;
+  padding: 4px;
+  margin: 10px;
+  border-radius: 40px;
+  color: #294860;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.term {
+  height: 120px;
+  width: 120px;
+/*  border-radius: 50%;*/
+  opacity: 0.3;
+  /* makes colors less bright by default 
+  margin: 0 auto;
+  display: inline-block;*/
+}
+  .computer {
+    background-color: #FF33CC;
+  }
+  .program {
+    background-color: #9966FF;
+  }
+  .precise {
+    background-color: #FF6699;
+  }
+  .computation {
+    background-color: #FFCCCC;
+  }
+  .highlevel {
+    background-color: #FFCCFF;
+  }
+  .input {
+    background-color: #CC6699;
+  }
+  .interpreter {
+    background-color: #FAF0E6;
+  }
+  .on {
+    opacity: 1;
+  }
+  .code {
+    font-family: Courier New, Courier, monospace;
+  }
+  /*.columns {
+    -webkit-column-count: 2; ## Chrome, Safari, Opera 
+    -moz-column-count: 2; ## Firefox 
+    column-count: 2; 
+    -webkit-column-gap: 40px; ##Chrome, Safari, Opera 
+    -moz-column-gap: 40px; ##Firefox 
+    column-gap: 40px;
+}
+*//*
 Comments are only to help PEOPLE read a code file. The
 computer ignores them.
 */
@@ -79,14 +239,6 @@ li {
 
 ol.a {
   list-style-type: lower-alpha;
-}
-
-.concept {
-  background-color: #DFEAF1;
-  padding: 4px;
-  margin: 10px;
-  border-radius: 40px;
-  color: #294860;
 }
 
 

@@ -1,13 +1,13 @@
-application: FinalProject
+application: finalproject
 version: 1
 runtime: python27
 api_version: 1
 threadsafe: true
 
 # [START handlers]
-#handlers:
-#- url: /.*
-#  script: guestbook.app
+handlers:
+- url: /.*
+  script: finalproject.app
 # [END handlers]
 
 # [START libraries]
