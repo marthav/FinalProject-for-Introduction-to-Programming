@@ -32,9 +32,9 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 
 
 class MainHandler(webapp2.RequestHandler):
-    def get(self):
+#   def get(self):
 #        self.response.write('Hello world!')
 
-application = webapp2.WSGIApplication([
-    ('/', MainHandler)
-], debug=True)
+	application = webapp2.WSGIApplication([
+    	('/', MainHandler)
+	], debug=True)
