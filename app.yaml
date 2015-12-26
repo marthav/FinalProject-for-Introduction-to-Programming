@@ -6,8 +6,14 @@ threadsafe: true
 
 # [START handlers]
 handlers:
+- url: /css
+  static_dir: css
+- url: /templates
+  static_dir: html_templates
+  application_readable: true
 - url: /.*
-  script: finalproject.app
+	static_files: index.html	
+  	script: finalproject.application
 # [END handlers]
 
 # [START libraries]
