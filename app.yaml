@@ -12,8 +12,10 @@ handlers:
   static_dir: html_templates
   application_readable: true
 - url: /.*
-	static_files: index.html	
-  	script: finalproject.application
+  static_files: index.html	
+  #script: finalproject.application
+- url: /.*
+  static_dir: js
 # [END handlers]
 
 # [START libraries]
