@@ -13,6 +13,7 @@ handlers:
   application_readable: true
 - url: /.*
   static_files: index.html	
+  upload: index\.html
   #script: finalproject.application
 - url: /js
   static_dir: js
