@@ -9,9 +9,17 @@ function allOff() {
   }
 }
 
+/*var ID = document.getElementByID("program");
+
+#function allOff() {
+ # for (var i=0; i<ID.length; i = i+1) {
+  #  ID[i].classList.remove("on");
+  #}
+#}/*
 /* This defines a function which first turns off every light and then immediately turns one on.*/
 function switchTerm(termNumber) {
   allOff();
   var term = TERMS[termNumber];
   term.classList.add("on");
 }
+console.log(TERMS);
