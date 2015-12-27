@@ -14,7 +14,7 @@ handlers:
 - url: /.*
   static_files: index.html	
   #script: finalproject.application
-- url: /.*
+- url: /js
   static_dir: js
 # [END handlers]
 
