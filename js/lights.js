@@ -24,12 +24,15 @@ function switchTerm(termNumber) {
   term.classList.add("on");
 }
 
-/*function switchTerm(termName) {
+function switchTerm(target_class) {
   allOff();
-  var term = TERMS[termName];
+  var target_nodes = computer;
+  for (target_nodes== computer) { 
   term.classList.add("on");
 }
-*/
+}
+
+
 
 
 console.log(TERMS);
