@@ -533,11 +533,12 @@ udacity<br>
       <br>
       <br>
       <span class="code">
-        <% raw %>
-        var {{some variable name}} = var{{some value}} <br>
-         var firstName = MarthaV; <br>
-         var age = 35;<br>
-         <% endraw %>
+        {% raw %}
+        var {{some variable name}} = var{{some value}} 
+        var firstName = MarthaV; 
+        var age = 35;
+        {% endraw %}
+         
          other examples: <br>
          var myArray = [];<br>
          var myFunc = func(){}; <br>
@@ -642,12 +643,12 @@ udacity<br>
     </form>
 
     <hr>
-    
+    <% raw %>
     <form>Guestbook name:
       <input value="{{ guestbook_name }}" name="guestbook_name">
       <input type="submit" value="switch">
     </form>
-    
+    <% endraw%>
     <a href="{{ url|safe }}">{{ url_linktext }}</a>
       </body>
 </html>
