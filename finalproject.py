@@ -160,9 +160,3 @@ app = webapp2.WSGIApplication([
     ('/', MainPage), # this calls the MainPage class
     ('/sign', Guestbook), #this calls the Guestbook class
 ], debug=True)
-
-
-
-	application = webapp2.WSGIApplication([
-    	('/', MainHandler)
-	], debug=True)
