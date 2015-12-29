@@ -14,14 +14,17 @@
     <meta charset="utf-8">
 
 <title>Martha's Notes</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/lights.js"></script>
 
 <body>
   <p class="thick" align="right">Martha's Notes &nbsp;&nbsp;&nbsp;
-    <a href="http://imgur.com/SuRKrZn"><img src="http://i.imgur.com/SuRKrZn.jpg?2" title="source: imgur.com" /></a></a>&nbsp;&nbsp;&nbsp; for IPND </p>
+    <a href="http://imgur.com/SuRKrZn"><img src="http://i.imgur.com/SuRKrZn.jpg?2" title="source: imgur.com" /></a>
+    </a>&nbsp;&nbsp;&nbsp; for IPND </p>
   <br>
   <br>
   <br>
-  <h1>Table of Contents</h1>
+  <h1 id="TOC">Table of Contents</h1>
   <div class="concept">
     <div class="newspaper">
 
@@ -55,12 +58,13 @@
                 <li><a href="#Self">Self</a> </li>
                 <li><a href="#Init">__init__</a> </li>
                 <li><a href="#Modulus">Modulus Operator</a></li>
-                <li><a href="#Template">Template</a></li>
+
                 <li><a href="#Dictionary">Dictionary</a></li>
                 <li><a href="#Problems">How to Solve Problems</a>
                   <li><a href="#Abstraction">Abstraction</a>
             </ul>
             </li>
+            <li><a href="#Templates">Templates</a></li>
             <li><a href="#Networks">Introduction to Networks</a>
               <ul>
                 <li><a href=#MakingInternetWork>Making Internet Work for You</a>
@@ -77,7 +81,7 @@
     </div>
   </div>
 
-  <h1 id="BNotes">Beginning Notes</h1>
+  <h1 id="BNotes">Beginning Notes <a href="#TOC"><img src="http://i.imgur.com/1aQmhFh.jpg?1" title="source: imgur.com" /></a></h1>
   <div class="concept">
     <p> Well, before I submit the webpage for 7/27 due date, I decided to do a walk through of what I'm supposed to be doing, and where I'm supposed to be going. I decided to make note of the first bit:</p>
     <p>
@@ -98,7 +102,7 @@
     <p><em>(this one seems like a really tall order!)</em></p>
   </div>
 
-  <h1 id="ThinkingLikeAProgrammer">Getting Started - Thinking Like a Programmer</h1>
+  <h1 id="ThinkingLikeAProgrammer">Getting Started - Thinking Like a Programmer &nbsp;<a href="#TOC"><img src="http://i.imgur.com/1aQmhFh.jpg?1" title="source: imgur.com" /></a></h1>
   <div class="concept">
     <ul>
       <li>Procedural Thinking</li>
@@ -190,28 +194,28 @@ print escape_html("test")
     <p> HTML is truly the substance of the document. The core of the document. Cascading Style Sheets, is just that, how the document looks. I like to think of it as the CSS being the wardrobe if you will. And finally, DOM, Document Object Model. The DOM
       takes the HTML elements, tags, etc. and creates the tree "structure" I like to think of this as the skeleton of the document. It's not the substance, but what you hang or attach the substance to.</p>
   </div>
- <h1 id="IntroductionToSeriousProgramming">Introduction to Serious Programming &nbsp; <a href="#TOC"><img src="http://i.imgur.com/1aQmhFh.jpg?1" title="source: imgur.com" /></a></h1>
+  <h1 id="IntroductionToSeriousProgramming">Introduction to Serious Programming &nbsp; <a href="#TOC"><img src="http://i.imgur.com/1aQmhFh.jpg?1" title="source: imgur.com" /></a></h1>
   <div class="concept">
     <table style="width:100%">
       <tr>
         <td class="center">
-           <span class="term computer on" onclick="switchTerm(computer)"> computer</span>
+          <span class="term computer on" onclick="switchTerm(computer)"> computer</span>
           <span class="term program" onclick="switchTerm(1)">program</span>
           <span class="term precise" onclick="switchTerm(2)">precise sequence of steps</span>
           <span class="term computation" onclick="switchTerm(3)">computation</span>
-          <span class="term highlevel" onclick"switchTerm(4)">highlevel language</span>
+          <span class="term highlevel" onclick "switchTerm(4)">highlevel language</span>
           <span class="term input" onclick="switchTerm(5)">input</span>
           <span class="term interpreter" onclick="switchTerm(6)">interpreter</span>
         </td>
       </tr>
-   <tr>
+      <tr>
         <td>
-          A  <span class="term computer on" onclick="switchTerm(computer)"> computer</span> is a universal <span class="term computation" onclick="switchTerm(3)">computation </span>machine. A <span class="term program" onclick="switchTerm(1)">program</span> is a <span class="term precise" onclick="switchTerm(2)">precise sequence of steps</span> for a  <span class="term computer on" onclick="switchTerm(computer)"> computer</span>.
-          A <span class="term highlevel" onclick="switchTerm(4)">high level language</span>, ie python, <span class="term interpreter" onclick="switchTerm(6)">interpreter</span> runs <span class="term program" onclick="switchTerm(1)">programs</span> using <span class="term input" onclick="switchTerm(5)">inputs.</span>
+          A <span class="term computer on" onclick="switchTerm(computer)"> computer</span> is a universal <span class="term computation" onclick="switchTerm(3)">computation </span>machine. A <span class="term program" onclick="switchTerm(1)">program</span>          is a <span class="term precise" onclick="switchTerm(2)">precise sequence of steps</span> for a <span class="term computer on" onclick="switchTerm(computer)"> computer</span>. A <span class="term highlevel" onclick="switchTerm(4)">high level language</span>,
+          ie python, <span class="term interpreter" onclick="switchTerm(6)">interpreter</span> runs <span class="term program" onclick="switchTerm(1)">programs</span> using <span class="term input" onclick="switchTerm(5)">inputs.</span>
         </td>
-      </tr> 
+      </tr>
     </table>
-  </div> 
+  </div>
 
   <h2 id="Assignment">Assignment Statement</h2>
   <div class="concept">
@@ -391,19 +395,6 @@ udacity<br>
         <li>"text %s text %s" % (var1, var2)</li>
     </ul>
   </div>
-  <h2 id="Template">Template</h2>
-  <div class="concept">
-    <p>A template library is a library to build complicated strings.
-      <br> For this class jinja2 would be imported into the python file and referenced in the *.yaml file. Advantages of templates:
-      <br>
-      <ul>
-        <li>separate different types of code</li>
-        <li>make more readable code</li>
-        <li>make more secure websites</li>
-        <li>html files are easier to modify</li>
-      </ul>
-    </p>
-  </div>
 
   <h2 id="Dictionary">Dictionary</h2>
   <div class="concept">
@@ -420,8 +411,20 @@ udacity<br>
       Abstraction and libraries; In python and other languages, you can download different modules from the library. These modules have functions that you can use within your code by simply importing these modules from the library. The programmer is not required
       to know how these modules work only how to access them by importing them from the library. </p>
   </div>
-
-  <h1 id="Networks">Introduction to Networks</h1>
+  <h1 id="Templates">Templates  &nbsp; &nbsp; <a href="#TOC"><img src="http://i.imgur.com/1aQmhFh.jpg?1" title="source: imgur.com" /></a></h1>
+  <div class="concept">
+    <p>A template library is a library to build complicated strings.
+      <br> For this class jinja2 would be imported into the python file and referenced in the *.yaml file. Advantages of templates:
+      <br>
+      <ul>
+        <li>separate different types of code</li>
+        <li>make more readable code</li>
+        <li>make more secure websites</li>
+        <li>html files are easier to modify</li>
+      </ul>
+    </p>
+  </div>
+  <h1 id="Networks">Introduction to Networks &nbsp;<a href="#TOC"><img src="http://i.imgur.com/1aQmhFh.jpg?1" title="source: imgur.com" /></a></h1>
   <div class="concept">
     <p>
       A group of entities that can communicate, even though they're not all directly connected. </p>
@@ -463,7 +466,7 @@ udacity<br>
     <p>Not sure if forms should be part of validation or if validation should be part of forms. Validation is necessary for data integrity as well as security when accessing a database. You don't want the wrong person in your network and you don't want the
       wrong data in your network.</p>
   </div>
-  <h1 id="HolyMoly">Holy Moly and New Stuff</h1>
+  <h1 id="HolyMoly">Holy Moly and New Stuff &nbsp; <a href="#TOC"><img src="http://i.imgur.com/1aQmhFh.jpg?1" title="source: imgur.com" /></a></h1>
   <div class="concept">
     <p>Mile long and inch high coverage here of new ideas.</p>
   </div>
