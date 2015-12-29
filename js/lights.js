@@ -18,7 +18,7 @@ function allOff() {
 #}/*
 /* This defines a function which first turns off every light and then immediately turns one on.*/
 
-function switchTerm(termNumber) {
+/*function switchTerm(termNumber) {
   allOff();
   var term = TERMS[termNumber];
   term.classList.add("on");
@@ -31,8 +31,11 @@ function switchTerm(target_class) {
   term.classList.add("on");
 }
 }
+*/
+function switchTerm(target_class) {
+  console.log(target_class); // what was passed in...?
+  allOff();
 
-
-
-
+/*
 console.log(TERMS);
+*/
