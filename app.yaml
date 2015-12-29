@@ -16,7 +16,7 @@ handlers:
 - url: /.*
   #static_files: index.html
   #upload: index.html
-  script: guestbook.app
+  script: finalproject.application
 # [END handlers]
 
 # [START libraries]
