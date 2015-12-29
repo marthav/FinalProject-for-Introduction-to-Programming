@@ -65,6 +65,11 @@
             </ul>
             </li>
             <li><a href="#Templates">Templates</a></li>
+            <ul>
+              <li><a href="#PostGet">Post and Get</a></li>
+              <li><a href="Validation">Validation</a></li>
+            </ul>
+
             <li><a href="#Networks">Introduction to Networks</a>
               <ul>
                 <li><a href=#MakingInternetWork>Making Internet Work for You</a>
@@ -77,6 +82,7 @@
                   <li> <a href=#RecursionAndParallel>Recursion and Parallel Computing</a></li>
                   <li> <a href=#BigProblems>Solving Big Problems</a></li>
                   <li> <a href=#Conclusion>In Conclusion</a></li>
+                </ul>
       </ol>
     </div>
   </div>
@@ -423,7 +429,61 @@ udacity<br>
         <li>html files are easier to modify</li>
       </ul>
     </p>
+    <p>HTML templates allow you to put all of the action items in one place. Sortof like a toolkit. This way you can call the tools as you need them instead of re-writing the scripts for them over and over again within the main code. I look at it similar
+      to having a sewing pattern. You can make the same garment over and over again using the same pattern but using different materials in different colors with different alterations. In programming, once you have the template designed and running smoothly,
+      you can apply it to different code pieces and when you go to debug, you *know* that the template portion is clean and you only have to focus on the new code pieces.</p>
   </div>
+  <h2 id="PostGet">POST and GET</a></h2>
+  <div class="concept">
+    <p>Note that the query string (name/value pairs) is sent in the URL of a GET request:
+      <br> /test/demo_form.asp?name1=value1&name2=value2
+    </p>
+    <b>GET - Requests data from a specified resource:</b>
+    <br> Some other notes on GET requests:
+    <ol type="a">
+      <li>GET requests can be cached</li>
+      <li>GET requests remain in the browser history</li>
+      <li>GET requests can be bookmarked</li>
+      <li>GET requests should never be used when dealing with sensitive data</li>
+      <li>GET requests have length restrictions</li>
+      <li>GET requests should be used only to retrieve data</li>
+    </ol>
+    <b>The POST Method</b>
+    <p>Note that the query string (name/value pairs) is sent in the HTTP message body of a POST request:</p>
+    <p>
+      POST /test/demo_form.asp HTTP/1.1
+      <br> Host: w3schools.com
+      <br> name1=value1&name2=value2
+      <br>
+    </p>
+    Some other notes on POST requests:
+    <ol type="a">
+      <li>POST requests are never cached</li>
+      <li>POST requests do not remain in the browser history</li>
+      <li>POST requests cannot be bookmarked</li>
+      <li>POST requests have no restrictions on data length</li>
+    </ol>
+    The GET/POST detail was retrieved from <i>http://www.w3schools.com/tags/ref_httpmethods.asp</i>
+    <br>
+
+    <p> Under the Guestbook class, used in these notes, we are posting data to the server by way of the guestbook form. We are also validating/retrieving data from the database.</p>
+  </div>
+  <h2 id="Validation">Validation</h2>
+  <div class="concept">
+    <ol type="a">
+      <li>
+        <p>It is important to validate the user. In this exercise, it is only a very high level validation. Truth is, anyone can sign this log book. To make it more secure you would have to confirm that the user met certain criteria before even accessing
+          the guestbook. otherwise the database can be accessed, corrupted and data stolen.</p>
+      </li>
+
+      <li>
+        <p>Form validation is the process where a web-form checks to see if the information that's been entered into it is correct. In this exercise, we only checked to make sure that the user is notified that they've either entered *real* information versus
+          blanks and displays a message confirming that. Ideally, the web form would interact with the end user in a way that made the user feel like the form was responding to her. The validation would also require, where necessary, that information
+          is entered in the correct format, for example, an email would be required to follow this format <i>emailname@something.com.</i></li>
+      </p>
+    </ol>
+  </div>
+
   <h1 id="Networks">Introduction to Networks &nbsp;<a href="#TOC"><img src="http://i.imgur.com/1aQmhFh.jpg?1" title="source: imgur.com" /></a></h1>
   <div class="concept">
     <p>
@@ -557,9 +617,41 @@ udacity<br>
       this was quite the comprehensive overview.</p>
   </div>
 
+<h2 id="Comments">Reader's comments</h2>
+ <div class="concept">
+{% autoescape true %}
+    {% for greeting in greetings %} 
+      {% if greeting.author %}
+        <b>{{ greeting.author.email }}
+          {% if user and user.user_id() == greeting.author.identity %}
+            (You)
+          {% endif %}
+        </b> wrote:
+      {% else %}
+       An anonymous person wrote:
+      {% endif %}
+      <blockquote>{{ greeting.content }}</blockquote>
+    {% endfor %}
 
-</body>
 
-</html>
+    <!-- the alert referenced below provides an error message if invalid input is 
+     given-->
+     
+    {{ alert }}
     
+    <form action="/sign?guestbook_name={{ guestbook_name }}" method="post">
+      <div><textarea name="content" rows="3" cols="60"></textarea></div>
+      <div><input type="submit" value="Sign Guestbook"></div>
+    </form>
 
+    <hr>
+
+    <form>Guestbook name:
+      <input value="{{ guestbook_name }}" name="guestbook_name">
+      <input type="submit" value="switch">
+    </form>
+
+    <a href="{{ url|safe }}">{{ url_linktext }}</a>
+      </body>
+</html>
+    {% endautoescape %}
