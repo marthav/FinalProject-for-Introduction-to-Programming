@@ -14,9 +14,9 @@ handlers:
 - url: /js
   static_dir: js
 - url: /.*
-  static_files: index.html
-  upload: index.html
-  #script: finalproject.application
+  #static_files: index.html
+  #upload: index.html
+  script: guestbook.app
 # [END handlers]
 
 # [START libraries]
