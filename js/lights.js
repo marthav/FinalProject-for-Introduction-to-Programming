@@ -35,6 +35,7 @@ function switchTerm(target_class) {
 function switchTerm(target_class) {
   console.log(target_class); // what was passed in...?
   allOff();
+}  
 
 /*
 console.log(TERMS);
