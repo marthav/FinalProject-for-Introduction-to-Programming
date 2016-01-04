@@ -25,9 +25,11 @@ from google.appengine.ext import ndb
 import jinja2
 import webapp2
 
-JINJA_ENVIRONMENT = jinja2.Environment(
+#JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'])
+    
+jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir), autoescape = True)
 
 good_deal = "good deal the data is going in!"
 no_blanks = "we can't add blanks to the database!"
