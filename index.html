@@ -1,16 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 {% autoescape true %}
-<html >
-  <head>
-    <meta charset="UTF-8">
-    <title>Introduction to Programming Class</title>
-      <link rel="stylesheet" href="css/style.css">
-      <script src="js/lights.js"></script>
-  </head>
-
-  <body>
-
+<meta charset="utf-8">
+<html>
 <title>Martha's Notes</title>
+<link rel="stylesheet" href="css/style.css">
+
 
 <body>
   <p class="thick" align="right">Martha's Notes &nbsp;&nbsp;&nbsp;
@@ -19,8 +13,8 @@
   <br>
   <br>
   <br>
+  
   <h1 id="TOC">Table of Contents</h1>
-        <script src="js/lights.js"></script>
   <div class="concept">
     <div class="newspaper">
 
@@ -78,7 +72,6 @@
                   <li> <a href=#RecursionAndParallel>Recursion and Parallel Computing</a></li>
                   <li> <a href=#BigProblems>Solving Big Problems</a></li>
                   <li> <a href=#Conclusion>In Conclusion</a></li>
-                   <li> <a href=#Comments>Comments</a></li>
                 </ul>
       </ol>
     </div>
@@ -213,15 +206,8 @@ print escape_html("test")
       </tr>
       <tr>
         <td>
-          A <span class="term computer on" onclick="switchTerm('computer')"> computer</span> is a universal
-          <span class="term computation" onclick="switchTerm('computation')">computation </span>machine.
-          A <span class="term program" onclick="switchTerm('program')">program</span> is a 
-          <span class="term precise" onclick="switchTerm('precise')">precise sequence of steps</span> for
-          a <span class="term computer on" onclick="switchTerm('computer')"> computer</span>. 
-          A <span class="term highlevel" onclick="switchTerm('highlevel')">high level language</span>,
-          ie python, <span class="term interpreter" onclick="switchTerm('interpreter')">interpreter</span> 
-          runs <span class="term program" onclick="switchTerm('program')">programs</span> using 
-          <span class="term input" onclick="switchTerm('input')">inputs.</span>
+          A <span class="term computer on" onclick="switchTerm('computer')"> computer</span> is a universal <span class="term computation" onclick="switchTerm('computation')">computation </span>machine. A <span class="term program" onclick="switchTerm('program')">program</span>          is a <span class="term precise" onclick="switchTerm('precise')">precise sequence of steps</span> for a <span class="term computer on" onclick="switchTerm('computer')"> computer</span>. A <span class="term highlevel" onclick="switchTerm('highlevel')">high level language</span>,
+          ie python, <span class="term interpreter" onclick="switchTerm('interpreter')">interpreter</span> runs <span class="term program" onclick="switchTerm('program')">programs</span> using <span class="term input" onclick="switchTerm('input')">inputs.</span>
         </td>
       </tr>
     </table>
@@ -541,11 +527,11 @@ udacity<br>
       <br>
       <br>
       <span class="code">
-        {% raw %}
-        var {{some variable name}} = var{{some value}} 
-        var firstName = MarthaV; 
-        var age = 35;
-        {% endraw %}
+      	 {% raw %}
+         var {{some variable name}} = var{{some value}} 
+         var firstName = MarthaV; 
+         var age = 35;
+         {% endraw %}
          
          other examples: <br>
          var myArray = [];<br>
@@ -625,7 +611,7 @@ udacity<br>
 
 <h2 id="Comments">Reader's comments</h2>
  <div class="concept">
-{% autoescape true %}
+
     {% for greeting in greetings %} 
       {% if greeting.author %}
         <b>{{ greeting.author.email }}
@@ -651,13 +637,15 @@ udacity<br>
     </form>
 
     <hr>
-    <% raw %>
+	
     <form>Guestbook name:
-      <input value="{{ guestbook_name }}" name="guestbook_name">
+   
+      <input value= "{{ guestbook_name }}" name="guestbook_name">
       <input type="submit" value="switch">
     </form>
-    <% endraw%>
+	
     <a href="{{ url|safe }}">{{ url_linktext }}</a>
+    <script src="js/lights.js"></script> 
       </body>
 </html>
     {% endautoescape %}
