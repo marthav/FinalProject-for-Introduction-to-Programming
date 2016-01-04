@@ -23,12 +23,10 @@ allOff();
   // https://developer.mozilla.org/en-US/docs/Web/API/NodeList
  //for ( ...set up the for loop... ) { 
    //   target_node[i].classList.add("on"); // "turn on" each of those nodes!
-  for (var i=0; < target_class.length; i ++) ) { 
-  target_class[i].classList.add("on"); // "turn on" each of those nodes!
+  for (var j=0; j < target_class.length; j ++)  { 
+  target_class[j].classList.add("on"); // "turn on" each of those nodes!
   }
-
- 
-
+}
 
 
 
