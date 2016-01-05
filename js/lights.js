@@ -1,6 +1,5 @@
-
-/* This defines a function which turns off every light by removing the "on" class from the HTML elements.*/
-
+/* This defines a function which turns off every light by removing the "on" class from the HTML elements.
+ */
 var TERMS = document.getElementsByClassName("term");
 
 function allOff() {
@@ -10,11 +9,11 @@ function allOff() {
 
 
 // switch term has been called! 
-function switchTerm(target_class) {
-   console.log(target_class); // what was passed in...?
+  function switchTerm(target_class) {
+    console.log(target_class); // what was passed in...?
 // in this situation target_class is equal to "program"
-allOff();
-}
+    allOff();
+  }
   // at this time lets create a list/array containing ONLY the target elements we want to "turn on"
   var target_nodes = document.getElementsByClassName(target_class);// need a way to search HTML page for all elements with className "program"
 
@@ -24,9 +23,9 @@ allOff();
  //for ( ...set up the for loop... ) { 
    //   target_node[i].classList.add("on"); // "turn on" each of those nodes!
   for (var j=0; j < target_class.length; j ++)  { 
-  target_class[j].classList.add("on"); // "turn on" each of those nodes!
+    target_class[j].classList.add("on"); // "turn on" each of those nodes!
   }
-}
 
+}
 
 
