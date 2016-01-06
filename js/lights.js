@@ -6,26 +6,25 @@ function allOff() {
   for (var i=0; i<TERMS.length; i = i+1) {
     TERMS[i].classList.remove("on");
   }
+} // <= CRITICAL: you MUST close this function here
 
-
-// switch term has been called! 
-  function switchTerm(target_class) {
-    console.log(target_class); // what was passed in...?
-// in this situation target_class is equal to "program"
-    allOff();
+var allOn= function() {
+  for (var i=0; i<TERMS.length; i = i+1) {
+    TERMS[i].classList.add("on");
   }
-  // at this time lets create a list/array containing ONLY the target elements we want to "turn on"
-  var target_nodes = document.getElementsByClassName(target_class);// need a way to search HTML page for all elements with className "program"
-
-  // use a for loop to iterate over that sub-list
-  // review this link for how to loop over node list...see EXAMPLE section
-  // https://developer.mozilla.org/en-US/docs/Web/API/NodeList
- //for ( ...set up the for loop... ) { 
-   //   target_node[i].classList.add("on"); // "turn on" each of those nodes!
-  for (var j=0; j < target_class.length; j ++)  { 
-    target_class[j].classList.add("on"); // "turn on" each of those nodes!
-  }
-
 }
+
+  function switchTerm(target_class) {
+    allOff();
+  // } CRITICAL: this bracket is disrupting function definition...MUST remove
+
+  var target_nodes = document.getElementsByClassName(target_class);
+  
+ // for (var j=0; j < target_class.length; j++)  { // <= target_class is a String...not what you want
+  for (var j=0; j < target_nodes.length; j++)  {  // <= target_nodes is what you want to loop over
+    target_nodes[j].classList.add("on"); // <= this has to be target_nodes, the List
+  }
+}
+
 
 
